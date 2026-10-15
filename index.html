@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Create Smooth Glow Effects Around Animated Text in Alight Motion</title>
+<meta name="description" content="A practical tutorial on creating smooth glow effects around animated text in Alight Motion — glow setup, color, blur intensity, opacity, and keyframe timing.">
+<link rel="canonical" href=""><script>document.querySelector('link[rel="canonical"]').href=window.location.href;</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Create Smooth Glow Effects Around Animated Text in Alight Motion","publisher":{"@type":"Organization","name":"ammod.io"}}</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;font-weight:300;background:#0d0d1a;color:#d8d8f0;line-height:1.85}
+.hero{background:linear-gradient(135deg,#1a0a3a 0%,#0a1a3a 100%);padding:60px 28px;text-align:center;border-bottom:2px solid #3a2a6a}
+.hero h1{font-size:2.4rem;font-weight:800;color:#e8d0ff;max-width:760px;margin:0 auto;line-height:1.15}
+.hero p{color:#5a4a8a;font-size:.85rem;margin-top:12px}
+main{max-width:860px;margin:0 auto;padding:52px 28px 70px}
+.intro{font-size:1.08rem;color:#8878b0;margin-bottom:40px}
+.intro a{color:#c090ff;text-decoration:none;font-weight:600}
+h2{font-size:1.5rem;font-weight:600;color:#e8d0ff;margin:44px 0 18px}
+p{font-size:1.06rem;color:#7878a8;margin-bottom:18px}
+.steps{display:flex;flex-direction:column;gap:3px;margin:36px 0}
+.step{background:#141428;padding:20px 22px;display:flex;gap:18px;align-items:flex-start}
+.step:nth-child(even){background:#111122}
+.step-n{background:#6030c0;color:#fff;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.88rem;font-weight:700;flex-shrink:0;margin-top:2px}
+.step-body h4{font-size:1rem;font-weight:600;color:#c8a8ff;margin-bottom:6px}
+.step-body p{font-size:.97rem;color:#6868a0;margin:0}
+ul{padding-left:0;list-style:none;margin:24px 0}
+li{margin-bottom:14px;padding-left:22px;position:relative;font-size:1.05rem;color:#7878a8}
+li::before{content:'▸';position:absolute;left:0;color:#9060e0}
+.tip{background:#141428;border-left:3px solid #6030c0;padding:20px 22px;margin:32px 0;font-size:1.04rem;color:#8878b0}
+footer{background:#080814;color:#2a2040;text-align:center;padding:22px;font-size:.85rem;border-top:1px solid #1a1428;margin-top:40px}
+@media(max-width:768px){.hero h1{font-size:1.85rem}main{padding:36px 18px}.step{flex-direction:column;gap:10px}}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1>How to Create Smooth Glow Effects Around Animated Text in Alight Motion</h1>
+<p>ammod.io — Motion Graphics Tutorial</p>
+</div>
+<main>
+<p class="intro">In <a href="https://ammod.io/">am mod</a>, you will get extra features that can help you create smoother text animations and experiment with different glow effects. Soft glow around moving text is one of the most visually effective treatments in motion graphics — it draws attention without overwhelming the message and adds a luminous quality that makes typography feel intentional and polished.</p>
+<p>The challenge with glow on animated text is maintaining consistency as the text moves. A glow that changes size or intensity unpredictably as the text animates distracts from the content. This tutorial covers the full process from initial glow setup through keyframe-based consistency.</p>
+<h2>Setting Up the Glow Layer</h2>
+<p>Duplicate your text layer and place the copy directly beneath the original. This duplicate becomes the glow source — it receives the blur and color treatment while the original stays sharp and readable. Both layers must share identical position and timing throughout the animation.</p>
+<div class="steps">
+<div class="step"><div class="step-n">1</div><div class="step-body"><h4>Choose the Glow Color</h4><p>Select a color slightly lighter and more saturated than your text. For white text, try soft cool blue or warm gold. The glow should complement the text without competing for visual priority.</p></div></div>
+<div class="step"><div class="step-n">2</div><div class="step-body"><h4>Apply Gaussian Blur</h4><p>Apply Gaussian blur to the duplicate. Start around 20 to 40 pixels depending on text size. The blur should spread the color softly — enough that individual letter edges are not visible in the glow layer.</p></div></div>
+<div class="step"><div class="step-n">3</div><div class="step-body"><h4>Set Blend Mode</h4><p>Set the blurred duplicate to Add or Screen blend mode. These modes add brightness rather than replacing pixels, producing the characteristic luminous appearance of emitted light.</p></div></div>
+<div class="step"><div class="step-n">4</div><div class="step-body"><h4>Adjust Opacity</h4><p>Lower opacity to around 60 to 80 percent. The glow should feel like light radiating from the text, not a second copy. Full opacity creates a heavy, unnatural result.</p></div></div>
+<div class="step"><div class="step-n">5</div><div class="step-body"><h4>Link to Position Keyframes</h4><p>Ensure the glow layer shares every position keyframe with the text layer. If the text moves, the glow must move identically. Any drift between the two breaks the illusion immediately.</p></div></div>
+</div>
+<h2>Keeping Glow Consistent Through Movement</h2>
+<p>Use easing on every opacity and blur keyframe to prevent sharp transitions during movement. For text that fades in, let the glow opacity begin rising slightly before the text opacity starts, and let it fall slightly after the text fades out — this makes the light feel like it precedes and follows the text rather than switching on and off.</p>
+<div class="tip">Avoid harsh edges by increasing blur until all sharp transitions around letter boundaries disappear. The glow should read as a smooth field of light, not a blurred copy of the letterforms. Test on both dark and mid-tone backgrounds before finalizing the composition.</div>
+<ul>
+<li>Sync glow layer position with text layer on every animation frame</li>
+<li>Use Add or Screen blend mode for additive brightness</li>
+<li>Apply easing to all opacity and blur keyframes to prevent jarring changes</li>
+<li>Start glow fade slightly before text fade-in for a natural luminous lead</li>
+</ul>
+</main>
+<footer>© 2026</footer>
+</body>
+</html>
